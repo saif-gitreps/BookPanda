@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- font awsome tool kit  -->
+      <script
+         src="https://kit.fontawesome.com/4b607fb1a6.js"
+         crossorigin="anonymous"
+      ></script>
+      <!-- ends  -->
+      <!-- css file added  -->
+      <link rel="stylesheet" href="/styles/login_style.css" />
+      <!-- ends  -->
+      <!-- javascript file added  -->
+      <script src="../javascript/reg-script.js"></script>
+      <!-- ends  -->
+      <!-- icon pic added  -->
+      <link rel="icon" href="images/logoc3.jpg" />
+      <!-- ends  -->
+      <title>BOOKPANDA</title>
+   </head>
+
+   <body class="bg">
+      <nav class="nav">
+         <div class="name">
+            <h1 class="glow">BOOKPANDA</h1>
+         </div>
+         <div class="link">
+            <a href="/register">SIGN UP</a>
+         </div>
+      </nav>
+      <form id="MyFm" onsubmit="return validateForm()" method="post">
+         <div class="cont">
+            <div class="box2">
+               <!-- username -->
+               <i class="fa-solid fa-user"></i>
+               <input
+                  type="text"
+                  name="USERNAME"
+                  id="fusername"
+                  required
+                  placeholder="USERNAME"
+                  pattern="[a-z0-9]{1,15}"
+               /><b><span class="ferr"></span></b>
+               <!-- username section ends -->
+               <!-- password section  -->
+               <i class="fa-solid fa-lock"></i>
+               <input
+                  type="password"
+                  name="pass"
+                  id="passw"
+                  required
+                  placeholder=" password"
+               /><b><span class="ferr"></span></b>
+               <!-- password section ends  -->
+            </div>
+            <p class="message-box"><%= message %></p>
+            <button class="button"><b>LOGIN</b></button> <br />
+         </div>
+      </form>
+   </body>
+</html>
