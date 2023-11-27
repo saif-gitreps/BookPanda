@@ -31,17 +31,17 @@
             <a href="/register">SIGN UP</a>
          </div>
       </nav>
-      <form id="MyFm" onsubmit="return validateForm()" method="post">
+      <form id="MyFm" method="post" action="/login">
          <div class="cont">
             <div class="box2">
                <!-- username -->
                <i class="fa-solid fa-user"></i>
                <input
                   type="text"
-                  name="USERNAME"
+                  name="EMAIL"
                   id="fusername"
                   required
-                  placeholder="USERNAME"
+                  placeholder="Email"
                   pattern="[a-z0-9]{1,15}"
                /><b><span class="ferr"></span></b>
                <!-- username section ends -->
@@ -49,10 +49,10 @@
                <i class="fa-solid fa-lock"></i>
                <input
                   type="password"
-                  name="pass"
+                  name="PASSWORD"
                   id="passw"
                   required
-                  placeholder=" password"
+                  placeholder="Password"
                /><b><span class="ferr"></span></b>
                <!-- password section ends  -->
             </div>

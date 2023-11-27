@@ -4,6 +4,7 @@ const db = require("./database/data");
 
 //routes requiring
 const loginRoutes = require("./routes/login");
+const registerRoutes = require("./routes/register");
 
 app = express();
 
@@ -17,9 +18,7 @@ app.use(loginRoutes);
 //login page e.
 
 //register page s
-app.get("/register", (request, response) => {
-   response.render("register");
-});
+app.use(registerRoutes);
 //register page e
 
 app.listen(3000, () => {

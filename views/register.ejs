@@ -28,24 +28,21 @@
             <h1 class="glow">BOOKPANDA</h1>
          </div>
          <div class="link">
-            <a href="../html/login.html">LOGIN</a>
+            <a href="/">LOGIN</a>
          </div>
       </nav>
-      <form id="MyFm" onsubmit="return validateForm()" method="post">
+      <form id="MyFm" method="post" action="/register">
          <div class="cont">
             <div class="box2">
                <!-- name -->
-               <input type="text" required placeholder="Enter  name" /><b
+               <input type="text" required placeholder="Enter name" name="NAME" /><b
                   ><span class="ferr"></span
                ></b>
                <!-- email -->
                <i class="fa-solid fa-envelope-open"></i>
-               <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Enter email address"
-               /><b><span class="ferr"></span></b>
+               <input type="email" name="EMAIL" required placeholder="Enter email" /><b
+                  ><span class="ferr"></span
+               ></b>
                <!-- ends -->
             </div>
             <div class="box2">
@@ -55,8 +52,7 @@
                   type="text"
                   name="USERNAME"
                   id="fusername"
-                  required
-                  placeholder="USERNAME"
+                  placeholder="Enter User Name"
                   pattern="[a-z0-9]{1,15}"
                /><b><span class="ferr"></span></b>
                <!-- username section ends -->
@@ -64,9 +60,12 @@
             <div class="box2" id="passw">
                <!-- password section  -->
                <i class="fa-solid fa-lock"></i>
-               <input type="password" name="pass" required placeholder=" password" /><b
-                  ><span class="ferr"></span
-               ></b>
+               <input
+                  type="password"
+                  name="PASSWORD"
+                  required
+                  placeholder="Enter Password"
+               /><b><span class="ferr"></span></b>
                <!-- password section ends  -->
             </div>
             <div class="box2" id="cpassw">
@@ -74,7 +73,7 @@
                <i class="fa-solid fa-lock"></i>
                <input
                   type="password"
-                  name="cpass"
+                  name="CPASSWORD"
                   required
                   placeholder="Confirm Password"
                /><b><span class="ferr"></span></b>
@@ -89,6 +88,7 @@
                   <option value="FEMALE">FEMALE</option></select
                ><br />
             </div>
+            <p><%= message %></p>
             <!-- options to select gender ends  -->
             <button class="button"><b>Sign Up</b></button> <br />
          </div>
