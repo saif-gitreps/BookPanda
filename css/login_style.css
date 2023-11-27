@@ -1,0 +1,112 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+.bg {
+   background-size: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   background-blend-mode: darken;
+   background-color: dimgrey;
+}
+.nav {
+   display: flex;
+   position: sticky;
+   top: 0px;
+
+   background-color: rgb(23, 23, 23);
+}
+
+.name {
+   color: aliceblue;
+
+   height: 100px;
+   width: 100%;
+   text-align: center;
+   font-size: 70px;
+}
+.glow {
+   color: #fff;
+   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px rgb(0, 225, 255);
+}
+.link {
+   height: 70px;
+   width: 200px;
+   font-size: 30px;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   letter-spacing: 20%;
+}
+.link a {
+   position: relative;
+   text-decoration: none;
+   color: #fff;
+   top: 50%;
+}
+
+.cont {
+   color: aliceblue;
+   position: absolute;
+   left: 30%;
+   top: 130%;
+}
+/* all box styles  */
+
+.box2 {
+   padding: 5px;
+}
+.box2 i {
+   margin: 0px;
+   width: 20px;
+}
+.box2 input {
+   width: 100%;
+   font-size: 23px;
+   color: rgb(230, 197, 195);
+   outline: none;
+   padding: 3.5%;
+
+   border-radius: 30px;
+   background: none;
+}
+
+.button {
+   text-align: center;
+   cursor: pointer;
+   font-family: fantasy;
+   font-size: 24px;
+   background: none;
+   color: black;
+
+   width: 26%;
+   outline: none;
+   margin: 23px 0px;
+   padding: 2% 0%;
+
+   border-radius: 14px;
+}
+.ferr {
+   color: red;
+}
+.button:hover {
+   color: rgb(135, 14, 14);
+   background: rgb(245, 242, 242);
+   transition: 0.5s;
+}
+
+::placeholder {
+   color: whitesmoke;
+}
+.error {
+   color: red;
+}
+
+/* hover style  */
+
+.box2 input:hover {
+   background-color: black;
+   color: rgb(118, 95, 95);
+   transition: 0.5s;
+}

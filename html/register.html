@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awsome tool kit  -->
+    <script src="https://kit.fontawesome.com/4b607fb1a6.js" crossorigin="anonymous"></script>
+    <!-- ends  -->
+    <!-- css file added  -->
+    <link rel="stylesheet" href="../css/register_style.css">
+    <!-- ends  -->
+    <!-- javascript file added  -->
+    <script src="../javascript/reg-script.js"></script>
+    <!-- ends  -->
+    <!-- icon pic added  -->
+    <link rel="icon" href="images/logoc3.jpg">
+    <!-- ends  -->
+    <title>BOOKPANDA</title>
+</head>
+
+<body class="bg">
+    <nav class="nav">
+        <div class="name">
+            <h1 class="glow">
+                BOOKPANDA
+
+            </h1>
+            
+        </div>
+        <div class="link">
+            <a href="../html/login.html">LOGIN</a>
+        </div>
+    </nav>
+    <form id="MyFm" onsubmit="return validateForm()" method="post">
+        <div class="cont">
+            
+            <div class="box2">
+                <!-- name -->
+                <input type="text" required placeholder="Enter  name"><b><span class="ferr"></span></b>
+                <!-- email -->
+                <i class="fa-solid fa-envelope-open"></i>
+                <input type="email" name="email" required placeholder="Enter email address"><b><span
+                        class="ferr"></span></b>
+                <!-- ends -->
+            </div>
+            <div class="box2">
+                <!-- username -->
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="USERNAME" id="fusername" required placeholder="USERNAME"
+                    pattern="[a-z0-9]{1,15}"><b><span class="ferr"></span></b>
+                <!-- username section ends -->
+            </div>
+            <div class="box2" id="passw">
+                <!-- password section  -->
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="pass" required placeholder=" password"><b><span class="ferr"></span></b>
+                <!-- password section ends  -->
+            </div>
+            <div class="box2" id="cpassw">
+                <!-- confirm password section -->
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="cpass" required placeholder="Confirm Password"><b><span
+                        class="ferr"></span></b>
+                <!-- confirm password section ends  -->
+            </div>
+            
+            <div id="option">
+                <!-- options to select gender  -->
+                <select name="gender" id="sex" required>
+                    <option value="">NONE</option>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select><b>
+            </div>
+            <!-- options to select gender ends  -->
+            <button class="button"><b>Sign Up</b></button> <br>
+        </div>
+    </form>
+</body>
+
+</html>

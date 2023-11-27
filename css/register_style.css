@@ -1,0 +1,128 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+.bg {
+   /* this picture is from source unsplash  */
+   background-size: cover;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   background-blend-mode: darken;
+   background-color: dimgrey;
+}
+.nav {
+   display: flex;
+   position: sticky;
+   top: 0px;
+   /* opacity: 0.8; */
+   background-color: rgb(23, 23, 23);
+}
+
+.name {
+   color: aliceblue;
+   /* border: 2px solid red; */
+   height: 100px;
+   width: 100%;
+   text-align: center;
+   font-size: 70px;
+}
+.glow {
+   color: #fff;
+   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px rgb(0, 225, 255);
+}
+.link {
+   height: 70px;
+   width: 200px;
+   font-size: 30px;
+
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   letter-spacing: 20%;
+}
+.link a {
+   position: relative;
+   text-decoration: none;
+   color: #fff;
+   top: 50%;
+}
+
+.cont {
+   /* display: flex; */
+   color: aliceblue;
+   position: absolute;
+   left: 30%;
+   top: 130%;
+   /* border: 3px solid white; */
+}
+/* all box styles  */
+
+.box2 {
+   /* width: 100%; */
+   padding: 5px;
+}
+.box2 i {
+   margin: 0px;
+   width: 20px;
+}
+.box2 input {
+   width: 100%;
+   font-size: 23px;
+   color: rgb(230, 197, 195);
+   outline: none;
+   padding: 3.5%;
+   /* border: 6px solid rgb(218, 37, 37); */
+   border-radius: 30px;
+   background: none;
+}
+
+.button {
+   cursor: pointer;
+   font-family: fantasy;
+   font-size: 21px;
+   background: none;
+   color: black;
+   /* border: 7px solid rgb(252, 112, 48); */
+   width: 26%;
+   outline: none;
+   margin: 23px 0px;
+   padding: 15px;
+   position: absolute;
+   border-radius: 14px;
+   left: 40%;
+}
+.ferr {
+   color: red;
+}
+.button:hover {
+   color: rgb(135, 14, 14);
+   background: rgb(245, 242, 242);
+   transition: 0.5s;
+}
+
+#sex {
+   color: antiquewhite;
+   background-color: rgb(0, 0, 0);
+   transition: 0.5s;
+}
+::placeholder {
+   color: whitesmoke;
+}
+.error {
+   color: red;
+}
+
+/* hover style  */
+
+.cont h1:hover {
+   background-color: rgb(0, 0, 0);
+   color: rgb(60, 114, 168);
+   transition: 0.4s;
+}
+
+.box2 input:hover {
+   background-color: black;
+   color: rgb(118, 95, 95);
+   transition: 0.5s;
+}
