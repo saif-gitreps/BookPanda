@@ -28,7 +28,10 @@ router.post("/register", async (request, response) => {
       [formData.NAME, formData.EMAIL, formData.PASSWORD, 0, 0]
    );
    response.send(
-      `<h3 style="text-align:center;">Account created, click <a href="/">here</a> to login.</h3>`
+      `<h3 style="text-align:center; 
+      background-color:black; 
+      color:white">
+      Account created, click <a href="/">here</a> to login.</h3>`
    );
 });
 

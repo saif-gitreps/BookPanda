@@ -10,17 +10,19 @@ router.get("/", (request, response) => {
 router.post("/login", async (request, response) => {
    const loginData = request.body;
 
-   if (loginData.userselection == "admin") {
+   if (loginData.userselection == "seller") {
       const data = await db.query("select * from admin where email = ?", [
          loginData.EMAIL,
       ]);
-      const adminData = data[0];
-      if (adminData.length == 0) {
-         response.render("index", { message: "No such Administrator exist." });
-      } else if (adminData[0].password !== loginData.PASSWORD) {
+      const sellerData = data[0];
+      if (sellerData.length == 0) {
+         response.render("index", {
+            message: "No such email exists, Create an account to login.",
+         });
+      } else if (sellerData[0].password !== loginData.PASSWORD) {
          response.render("index", { message: "Incorrect password, please retry again." });
       } else {
-         response.redirect(`/seller/${adminData[0].id}`);
+         response.redirect(`/seller/${sellerData[0].id}`);
       }
    } else {
       const data = await db.query("select * from customer where email = ?", [
@@ -34,7 +36,7 @@ router.post("/login", async (request, response) => {
       } else if (customerData[0].password != loginData.PASSWORD) {
          response.render("index", { message: "Incorrect password, please retry again." });
       } else {
-         response.redirect(`/client-page/${customerData[0].id}`);
+         response.redirect(`/customer/${customerData[0].id}`);
       }
    }
 });
