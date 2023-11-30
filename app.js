@@ -5,6 +5,7 @@ const db = require("./database/data");
 //routes requiring
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
+const customerRoutes = require("./routes/customer");
 
 app = express();
 
@@ -20,6 +21,10 @@ app.use(loginRoutes);
 //register page s
 app.use(registerRoutes);
 //register page e
+
+//customer page s
+app.use(customerRoutes);
+//customer page e
 
 app.listen(3000, () => {
    console.log("server initiated.");
