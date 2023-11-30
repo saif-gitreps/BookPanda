@@ -10,8 +10,8 @@ router.get("/", (request, response) => {
 router.post("/login", async (request, response) => {
    const loginData = request.body;
 
-   if (loginData.userselection == "seller") {
-      const data = await db.query("select * from admin where email = ?", [
+   if (loginData.TYPE == "seller") {
+      const data = await db.query("select * from seller where email = ?", [
          loginData.EMAIL,
       ]);
       const sellerData = data[0];

@@ -50,10 +50,9 @@
                <i class="fa-solid fa-user"></i>
                <input
                   type="text"
-                  name="USERNAME"
+                  name="ADDRESS"
                   id="fusername"
-                  placeholder="Enter User Name"
-                  pattern="[a-z0-9]{1,15}"
+                  placeholder="Enter Address"
                /><b><span class="ferr"></span></b>
                <!-- username section ends -->
             </div>
@@ -82,10 +81,9 @@
 
             <div id="option">
                <!-- options to select gender  -->
-               <select name="gender" id="sex" required>
-                  <option value="">NONE</option>
-                  <option value="MALE">MALE</option>
-                  <option value="FEMALE">FEMALE</option></select
+               <select name="TYPE" class="type-option" required>
+                  <option value="CUSTOMER">customer</option>
+                  <option value="SELLER">seller</option></select
                ><br />
             </div>
             <p><%= message %></p>
