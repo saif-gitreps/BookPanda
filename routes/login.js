@@ -10,17 +10,17 @@ router.get("/", (request, response) => {
 router.post("/login", async (request, response) => {
    const loginData = request.body;
 
-   if (loginData.TYPE == "seller") {
+   if (loginData.TYPE == "SELLER") {
       const data = await db.query("select * from seller where email = ?", [
          loginData.EMAIL,
       ]);
       const sellerData = data[0];
       if (sellerData.length == 0) {
-         response.render("index", {
+         response.render("login", {
             message: "No such email exists, Create an account to login.",
          });
       } else if (sellerData[0].password !== loginData.PASSWORD) {
-         response.render("index", { message: "Incorrect password, please retry again." });
+         response.render("login", { message: "Incorrect password, please retry again." });
       } else {
          response.redirect(`/seller/${sellerData[0].id}`);
       }
@@ -30,11 +30,11 @@ router.post("/login", async (request, response) => {
       ]);
       const customerData = data[0];
       if (customerData.length == 0) {
-         response.render("index", {
+         response.render("login", {
             message: "No such email exists, Create an account to login.",
          });
       } else if (customerData[0].password != loginData.PASSWORD) {
-         response.render("index", { message: "Incorrect password, please retry again." });
+         response.render("login", { message: "Incorrect password, please retry again." });
       } else {
          response.redirect(`/customer/${customerData[0].id}`);
       }

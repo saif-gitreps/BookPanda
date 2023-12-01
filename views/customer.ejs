@@ -12,6 +12,9 @@
          <div class="wrapper">
             <div class="logo">BOOKPANDA</div>
             <ul class="nav-link">
+               <li id="logout-svg">
+                  <a href="/"><img src="../img/logout-svgrepo-com.svg" alt="logout" /></a>
+               </li>
                <li>
                   <a href=""><img src="../img/user-regular.svg" alt="user" /></a>
                </li>
@@ -42,17 +45,24 @@
             </ul>
          </div>
       </nav>
+      <% if(sellers.length == 0) {%>
+      <h1>Sorry no seller at our platform at this moment.</h1>
+      <% } else { %>
       <div class="box">
+         <h1 id="checkout">Checkout all of our sellers:</h1>
+         <% for(let seller of sellers) {%>
          <form action="#" class="frm2">
             <div class="retailer">
-               <h1>ROKOMARI</h1>
-               <p>Address :</p>
+               <!-- <h1>ROKOMARI</h1> -->
+               <h1>Name: <%= seller.name%></h1>
+               <h1>Address: <%= seller.address %></h1>
+               <h2>Retailer since <%= seller.joinDate %></h2>
                <div class="btn-box">
                   <button type="button" class="list">VIEW BOOK LIST</button>
-                  <button type="button" class="list">ADD LATER</button>
                </div>
             </div>
          </form>
+         <% } } %>
       </div>
    </body>
 </html>
