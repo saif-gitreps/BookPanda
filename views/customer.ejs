@@ -51,15 +51,12 @@
       <div class="box">
          <h1 id="checkout">Checkout all of our sellers:</h1>
          <% for(let seller of sellers) {%>
-         <form action="#" class="frm2">
+         <form action="/seller/<%=seller.id%>" method="GET" class="frm2">
             <div class="retailer">
-               <!-- <h1>ROKOMARI</h1> -->
                <h1>Name: <%= seller.name%></h1>
                <h1>Address: <%= seller.address %></h1>
                <h2>Retailer since <%= seller.joinDate %></h2>
-               <div class="btn-box">
-                  <button type="button" class="list">VIEW BOOK LIST</button>
-               </div>
+               <a href="/seller/<%= seller.id %>">View books</a>
             </div>
          </form>
          <% } } %>

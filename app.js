@@ -6,6 +6,7 @@ const db = require("./database/data");
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
 const customerRoutes = require("./routes/customer");
+const sellerRoutes = require("./routes/seller");
 
 app = express();
 
@@ -25,6 +26,18 @@ app.use(registerRoutes);
 //customer page s
 app.use(customerRoutes);
 //customer page e
+
+//seller page s
+app.use(sellerRoutes);
+//seller page e
+
+app.get("/seller/:id", async (request, response) => {
+   const sellerBook = await db.query(`select * from book_shelf where seller_id = ?`, [
+      request.params.id,
+   ]);
+   console.log(sellerBook);
+   response.redirect("/");
+});
 
 app.listen(3000, () => {
    console.log("server initiated.");
