@@ -56,7 +56,9 @@
                <h1>Name: <%= seller.name%></h1>
                <h1>Address: <%= seller.address %></h1>
                <h2>Retailer since <%= seller.joinDate %></h2>
-               <a href="/seller/<%= seller.id %>">View books</a>
+               <div class="btn-box">
+                  <button type="submit" class="list">VIEW BOOK LIST</button>
+               </div>
             </div>
          </form>
          <% } } %>

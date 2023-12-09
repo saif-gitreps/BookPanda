@@ -44,9 +44,8 @@ router.post("/register", async (request, response) => {
       );
    }
    response.send(
-      `<h3 style="text-align:center; 
-      background-color:black; 
-      color:white">
+      `<h3 style="text-align:center;  
+      color:black">
       Account created, click <a href="/">here</a> to login.</h3>`
    );
 });

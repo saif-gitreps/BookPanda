@@ -4,11 +4,10 @@ const db = require("../database/data");
 const router = express.Router();
 
 router.get("/seller/:id", async (request, response) => {
-   const sellerBook = await db.query(`select * from book_shelf where seller_id = ?`, [
+   const sellerBooks = await db.query(`select * from book_shelf where seller_id = ?`, [
       request.params.id,
    ]);
-   console.log(sellerBook);
-   response.redirect("/");
+   response.render("booklist", { books: sellerBooks[0] });
 });
 
 module.exports = router;

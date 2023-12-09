@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="/styles/booklist.css" />
+      <script
+         src="https://kit.fontawesome.com/4b607fb1a6.js"
+         crossorigin="anonymous"
+      ></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+
+   <body>
+      <nav>
+         <div class="nav-cont">
+            <div class="logo">BOOKPANDA</div>
+            <div class="icon">
+               <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <!-- Need a home button here -->
+         </div>
+      </nav>
+      <div class="list-cont">
+         <% if(books.length == 0) {%>
+         <h1>Sorry the seller is not selling any books at the moment</h1>
+         <% } else { %> <% for(let book of books) {%>
+         <form action="#">
+            <div class="list">
+               <div class="pic">
+                  <img src="../images/misirali.jpeg" alt="misirali" />
+               </div>
+               <div class="para">Title: <%=book.title%></div>
+               <!-- <div class="para">Written by: <%=book.author%></div> -->
+               <div class="btn">
+                  <a href="#"><button type="submit">View Books</button></a>
+               </div>
+            </div>
+         </form>
+         <% } } %>
+      </div>
+   </body>
+</html>
