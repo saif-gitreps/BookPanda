@@ -5,8 +5,8 @@
    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body {
-   /* background: linear-gradient(to top, black, rgb(182, 2, 2)); */
-   background-color: #752222;
+   background: linear-gradient(to top, black, rgb(182, 2, 2));
+   /* background-color: #752222; */
 }
 nav {
    background: #242526;
