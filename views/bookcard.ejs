@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>Book Card</title>
       <link rel="stylesheet" href="/styles/book.css" />
       <link
          rel="stylesheet"
@@ -26,10 +26,10 @@
          <p><span>Price:</span> <%= book.price %> Taka</p>
       </div>
       <div>
-         <form action="" method="post" style="display: inline">
+         <form action="/customer/:id/buy" method="post" style="display: inline">
             <button class="bt1">buy</button>
          </form>
-         <form action="" method="post" style="display: inline">
+         <form action="/customer/:id/borrow" method="post" style="display: inline">
             <button class="bt2">borrow</button>
          </form>
       </div>

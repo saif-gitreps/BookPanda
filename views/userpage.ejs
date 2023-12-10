@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/styles/styes-1.css" />
+      <title>User Page</title>
+   </head>
+   <body>
+      <header>
+         <h1>User Profile</h1>
+      </header>
+      <section>
+         <form action="/customer/<%=customer.id%>/update" method="POST">
+            <label for="userId">ID:</label>
+            <input
+               type="text"
+               id="userId"
+               name="userId"
+               value="<%=customer.id%>"
+               readonly
+            />
+
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" value="<%=customer.name%>" />
+
+            <label for="userEmail">Email:</label>
+            <input
+               type="email"
+               id="userEmail"
+               name="userEmail"
+               value="<%=customer.email%>"
+            />
+
+            <label for="userPassword">Password:</label>
+            <input
+               type="password"
+               id="userPassword"
+               name="userPassword"
+               value="<%=customer.password%>"
+            />
+            <label for="booksBought">Books Bought:<%=customer.books_purchased%></label>
+
+            <label for="booksBorrowed"
+               >Books Borrowed: <%=customer.books_borrowed%></label
+            >
+            <button type="submit">Save Profile</button>
+         </form>
+      </section>
+   </body>
+</html>

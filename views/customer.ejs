@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>Seller List</title>
       <link rel="stylesheet" href="/styles/customer.css" />
    </head>
 
@@ -58,6 +58,7 @@
                <h1>Name: <%= seller.name%></h1>
                <h1>Address: <%= seller.address %></h1>
                <h2>Retailer since <%= seller.joinDate %></h2>
+               <input type="hidden" name="customerId" value="<%=customerId%>" />
                <div class="btn-box">
                   <button type="submit" class="list">VIEW BOOK LIST</button>
                </div>
