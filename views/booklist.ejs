@@ -27,6 +27,12 @@
          <% } else { %> <% for(let book of books) {%>
          <form action="/book-card/<%=book.id%>" method="GET">
             <div class="list">
+               <input
+                  type="hidden"
+                  name="customerId"
+                  id="customerId"
+                  value="<%=customerId%>"
+               />
                <div class="pic">
                   <img src="../images/misirali.jpeg" alt="misirali" />
                </div>

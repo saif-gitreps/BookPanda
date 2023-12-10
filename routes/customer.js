@@ -29,4 +29,26 @@ router.post("/customer/:id/update", async (req, res) => {
    res.redirect(`/customer/${req.params.id}/profile`);
 });
 
+router.post("/customer/:id/buy", async (req, res) => {
+   const customer = await db.query("select books_purchased from customer where id = ?", [
+      req.params.id,
+   ]);
+   await db.query("update customer set books_purchased = ? where id = ?", [
+      customer[0][0].books_purchased + 1,
+      req.params.id,
+   ]);
+   res.redirect(`/customer/${req.params.id}`);
+});
+
+router.post("/customer/:id/borrow", async (req, res) => {
+   const customer = await db.query("select books_borrowed from customer where id = ?", [
+      req.params.id,
+   ]);
+   await db.query("update customer set books_borrowed = ? where id = ?", [
+      customer[0][0].books_borrowed + 1,
+      req.params.id,
+   ]);
+   res.redirect(`/customer/${req.params.id}`);
+});
+
 module.exports = router;

@@ -26,10 +26,18 @@
          <p><span>Price:</span> <%= book.price %> Taka</p>
       </div>
       <div>
-         <form action="/customer/:id/buy" method="post" style="display: inline">
+         <form
+            action="/customer/<%=customerId%>/buy"
+            method="post"
+            style="display: inline"
+         >
             <button class="bt1">buy</button>
          </form>
-         <form action="/customer/:id/borrow" method="post" style="display: inline">
+         <form
+            action="/customer/<%=customerId%>/borrow"
+            method="post"
+            style="display: inline"
+         >
             <button class="bt2">borrow</button>
          </form>
       </div>

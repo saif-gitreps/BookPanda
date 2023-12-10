@@ -8,7 +8,10 @@ router.get("/book-card/:id", async (request, response) => {
       request.params.id,
    ]);
    console.log(book[0][0]);
-   response.render("bookcard", { book: book[0][0] });
+   response.render("bookcard", {
+      book: book[0][0],
+      customerId: request.query.customerId,
+   });
 });
 
 module.exports = router;
