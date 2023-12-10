@@ -30,10 +30,16 @@
                            <ul class="mega-link">
                               <li>
                                  <div class="container">
-                                    <form action="" class="frm">
+                                    <form action="/search" class="frm" method="GET">
                                        <input
+                                          name="SEARCH"
                                           type="text"
                                           placeholder="AUTHOR , BOOK NAME , TYPE"
+                                       />
+                                       <input
+                                          type="hidden"
+                                          name="customerId"
+                                          value="<%=customerId%>"
                                        />
                                        <button type="submit">SEARCH</button>
                                     </form>

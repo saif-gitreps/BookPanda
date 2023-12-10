@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="/styles/result.css" />
+   </head>
+   <body>
+      <div>
+         <a href="/customer/<%=customerId%>" class="back">&#8249;</a>
+      </div>
+
+      <div>
+         <h1>Search result:</h1>
+         <% if(result.length == 0) {%>
+         <h1>sorry no matched result.</h1>
+         <%} else {%> <% for(const item of result) {%>
+         <form action="/book-card/<%=item.id%>>" method="GET">
+            <label for="name">Book Name: <%=item.title%></label>
+            <!-- <input type="text" id="name" name="name" readonly required /> -->
+            <label for="author">Author's Name: <%=item.author%></label>
+            <!-- <input type="text" id="author" name="author" readonly required /> -->
+            <label for="catagory">Catagory: <%=item.category%></label>
+            <!-- <input type="text" id="catagory" name="catagory" readonly required /> -->
+            <input type="hidden" value="<%=customerId%>" />
+            <button>View book</button>
+         </form>
+         <% } } %>
+      </div>
+   </body>
+</html>
