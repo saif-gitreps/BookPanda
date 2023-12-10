@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="/styles/book.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+   </head>
+   <body>
+      <div id="header">
+         <a href="#" class="back">&#8249;</a>
+         <a id="user-profile" href="/seller/<%=book.seller_id%>">back</a>
+      </div>
+      <!-- <div id="content">
+         <img class="book-cover" src="/images/bookcover.jpg" alt="Book Cover" />
+      </div> -->
+      <div id="main-body">
+         <p><span>Title :</span> <%= book.title %></p>
+         <p><span>Written by :</span> <%= book.author %></p>
+         <p><span>Genre :</span> <%= book.category %></p>
+         <p><span>Summary :</span> <%= book.summary %></p>
+         <p><span>Price:</span> <%= book.price %> Taka</p>
+      </div>
+      <div>
+         <form action="" method="post" style="display: inline">
+            <button class="bt1">buy</button>
+         </form>
+         <form action="" method="post" style="display: inline">
+            <button class="bt2">borrow</button>
+         </form>
+      </div>
+   </body>
+</html>
