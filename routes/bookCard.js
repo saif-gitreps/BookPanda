@@ -15,10 +15,9 @@ router.get("/book-card/:id", async (request, response) => {
 });
 
 router.get("/search", async (request, response) => {
-   const searchQuery = request.body.SEARCH;
-   console.log(searchQuery);
+   const searchQuery = request.query.SEARCH;
    const bookMatch = await db.query(
-      "select * from book_shelf where author like '%?' OR title like '%?' OR category like '%?'",
+      `select * from book_shelf where author like '%${searchQuery}%' OR title like '%${searchQuery}%' OR category like '%${searchQuery}%'`,
       [searchQuery, searchQuery, searchQuery]
    );
    console.log(bookMatch[0]);

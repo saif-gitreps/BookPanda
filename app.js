@@ -13,7 +13,7 @@ app = express();
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //login page s.
@@ -30,9 +30,23 @@ app.use(customerRoutes);
 
 //seller page s
 app.use(sellerRoutes);
-//seller page e
 
 app.use(bookCardRoutes);
+
+app.get("/search", async (request, response) => {
+   const searchQuery = request.body.SEARCH;
+   console.log(request.body);
+   console.log(searchQuery);
+   const bookMatch = await db.query(
+      "select * from book_shelf where author like '%?' OR title like '%?' OR category like '%?'",
+      [searchQuery, searchQuery, searchQuery]
+   );
+   console.log(bookMatch[0]);
+   response.render("result", {
+      result: bookMatch[0],
+      customerId: request.query.customerId,
+   });
+});
 
 app.listen(3000, () => {
    console.log("server initiated.");
