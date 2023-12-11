@@ -14,7 +14,6 @@ router.get("/customer/:id/profile", async (request, response) => {
    const customer = await db.query("select * from customer where id = ?", [
       request.params.id,
    ]);
-   console.log(customer[0][0]);
    response.render("userpage", {
       customer: customer[0][0],
    });
