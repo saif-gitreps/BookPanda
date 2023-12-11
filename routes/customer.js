@@ -36,7 +36,6 @@ router.post("/customer/:id/buy", async (req, res) => {
    const seller = await db.query("select books_sold from seller where id = ?", [
       req.body.sellerId,
    ]);
-   console.log(seller);
    await db.query("update seller set books_sold = ? where id = ?", [
       seller[0][0].books_sold + 1,
       req.body.sellerId,

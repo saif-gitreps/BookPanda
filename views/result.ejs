@@ -13,7 +13,7 @@
 
       <div>
          <h1>Search result:</h1>
-         <% if(result.length == 0) {%>
+         <% if(result.length == 0 || !result) {%>
          <h1>sorry no matched result.</h1>
          <%} else {%> <% for(const item of result) {%>
          <form action="/book-card/<%=item.id%>>" method="GET">
@@ -23,7 +23,7 @@
             <!-- <input type="text" id="author" name="author" readonly required /> -->
             <label for="catagory">Catagory: <%=item.category%></label>
             <!-- <input type="text" id="catagory" name="catagory" readonly required /> -->
-            <input type="hidden" value="<%=customerId%>" />
+            <input type="hidden" name="customerId" value="<%=customerId%>" />
             <button>View book</button>
          </form>
          <% } } %>

@@ -23,9 +23,8 @@ router.get("/seller/:id/profile", async (request, response) => {
 });
 
 router.post("/seller/:id/update", async (req, res) => {
-   await db.query(`update seller set name = ? , email = ?, password = ?`, [
+   await db.query(`update seller set name = ? , password = ?`, [
       req.body.userName,
-      req.body.userEmail,
       req.body.userPassword,
    ]);
    res.redirect(`/seller/${req.params.id}/profile`);
