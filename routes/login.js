@@ -9,7 +9,7 @@ router.get("/", (request, response) => {
 
 router.post("/login", async (request, response) => {
    const loginData = request.body;
-
+   console.log(loginData);
    if (loginData.TYPE == "SELLER") {
       const data = await db.query("select * from seller where email = ?", [
          loginData.EMAIL,
@@ -22,7 +22,7 @@ router.post("/login", async (request, response) => {
       } else if (sellerData[0].password !== loginData.PASSWORD) {
          response.render("login", { message: "Incorrect password, please retry again." });
       } else {
-         response.redirect(`/seller/${sellerData[0].id}`);
+         response.redirect(`/seller/${sellerData[0].id}/profile`);
       }
    } else {
       const data = await db.query("select * from customer where email = ?", [

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/styles/styes-1.css" />
+      <title>Seller Page</title>
+   </head>
+   <body>
+      <header>
+         <h1>Seller Profile</h1>
+      </header>
+      <section>
+         <form action="/seller/<%=seller.id%>/update" method="POST">
+            <label for="userId">ID:</label>
+            <input
+               type="text"
+               id="userId"
+               name="userId"
+               value="<%=seller.id%>"
+               readonly
+            />
+
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" value="<%=seller.name%>" />
+
+            <label for="userEmail">Email:</label>
+            <input
+               type="email"
+               id="userEmail"
+               name="userEmail"
+               value="<%=seller.email%>"
+            />
+
+            <label for="userPassword">Password:</label>
+            <input
+               type="password"
+               id="userPassword"
+               name="userPassword"
+               value="<%=seller.password%>"
+            />
+            <label for="booksBought">Books sold:<%=seller.books_sold%></label>
+
+            <label for="booksBorrowed">Books lent: <%=seller.books_lent%></label>
+
+            <label for="booksBorrowed">Date since joined: <%=seller.joinDate%></label>
+            <button type="submit">Save Profile</button>
+            <form action="/seller/<%= seller.id %>/newbooks" method="get">
+               <button type="submit">Add New Books</button>
+            </form>
+         </form>
+      </section>
+   </body>
+</html>
