@@ -22,7 +22,7 @@
          </div>
       </nav>
       <div class="list-cont">
-         <% if(books.length == 0) {%>
+         <% if(books.length == 0 || !books) {%>
          <h1>Sorry the seller is not selling any books at the moment</h1>
          <% } else { %> <% for(let book of books) {%>
          <form action="/book-card/<%=book.id%>" method="GET">

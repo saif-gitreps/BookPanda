@@ -31,7 +31,28 @@ router.post("/seller/:id/update", async (req, res) => {
    res.redirect(`/seller/${req.params.id}/profile`);
 });
 
-router.get("/seller/:id/newbooks", async (request, response) => {
-   response.render("add-books", { sellerId: request.params.id });
+router.get("/seller/:id/newbooks", (request, response) => {
+   response.render("add-books", { sellerId: request.params.id, message: "" });
+});
+router.post("/seller/:id/newbooks", async (request, response) => {
+   const book = request.body;
+   await db.query(
+      `insert into book_shelf
+                  (title, author, summary,seller_id, category, pages, price)
+                  values(?,?,?,?,?,?,?)`,
+      [
+         book.BOOKNAME,
+         book.AUTHOR,
+         book.SUMMARY,
+         request.params.id,
+         book.CATEGORY,
+         book.PRICE,
+         book.PAGES,
+      ]
+   );
+   response.render("add-books", {
+      sellerId: request.params.id,
+      message: "book added to your collection",
+   });
 });
 module.exports = router;

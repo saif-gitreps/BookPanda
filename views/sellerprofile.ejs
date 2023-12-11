@@ -45,9 +45,9 @@
 
             <label for="booksBorrowed">Date since joined: <%=seller.joinDate%></label>
             <button type="submit">Save Profile</button>
-            <form action="/seller/<%= seller.id %>/newbooks" method="get">
-               <button type="submit">Add New Books</button>
-            </form>
+         </form>
+         <form action="/seller/<%= seller.id %>/newbooks" method="get">
+            <button type="submit">Add New Books</button>
          </form>
       </section>
    </body>

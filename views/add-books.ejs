@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="styes-1.css" />
+      <link rel="stylesheet" href="/styles/styes-1.css" />
       <title>Add new books</title>
    </head>
    <body>
@@ -11,7 +11,7 @@
          <h1>Add New Books</h1>
       </header>
       <section>
-         <form action="" method="">
+         <form action="/seller/<%=sellerId%>/newbooks" method="post">
             <label for="bookname">Book Name:</label>
             <input type="text" id="bookname" name="BOOKNAME" />
 
@@ -32,6 +32,7 @@
 
             <button type="submit">Add to store</button>
          </form>
+         <p><%=message%></p>
       </section>
    </body>
 </html>
