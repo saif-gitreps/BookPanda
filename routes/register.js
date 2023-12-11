@@ -9,7 +9,6 @@ router.get("/register", (request, response) => {
 
 router.post("/register", async (request, response) => {
    const formData = request.body;
-   console.log(formData);
    if (formData.TYPE == "SELLER") {
       const sellerData = await db.query("select * from seller where email = ?", [
          formData.EMAIL,
