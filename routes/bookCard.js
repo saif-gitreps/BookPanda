@@ -7,7 +7,6 @@ router.get("/book-card/:id", async (request, response) => {
    const book = await db.query(`select * from book_shelf where id = ?`, [
       request.params.id,
    ]);
-   console.log(request.query.customerId);
    response.render("bookcard", {
       book: book[0][0],
       customerId: request.query.customerId,
@@ -20,7 +19,6 @@ router.get("/search", async (request, response) => {
       `select * from book_shelf where author like '%${searchQuery}%' OR title like '%${searchQuery}%' OR category like '%${searchQuery}%'`,
       [searchQuery, searchQuery, searchQuery]
    );
-   console.log(request.query.customerId);
    response.render("result", {
       result: bookMatch[0],
       customerId: request.query.customerId,
