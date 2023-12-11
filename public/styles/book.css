@@ -19,6 +19,7 @@ a:hover {
 }
 
 .back {
+   font-size: 3rem;
    border-radius: 50%;
    background-color: #add8e6;
    color: black;
