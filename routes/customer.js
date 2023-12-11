@@ -33,6 +33,15 @@ router.post("/customer/:id/buy", async (req, res) => {
    const customer = await db.query("select books_purchased from customer where id = ?", [
       req.params.id,
    ]);
+
+   const seller = await db.query("select books_sold from seller where id = ?", [
+      req.body.sellerId,
+   ]);
+   console.log(seller);
+   await db.query("update seller set books_sold = ? where id = ?", [
+      seller[0][0].books_sold + 1,
+      req.body.sellerId,
+   ]);
    await db.query("update customer set books_purchased = ? where id = ?", [
       customer[0][0].books_purchased + 1,
       req.params.id,
@@ -43,6 +52,13 @@ router.post("/customer/:id/buy", async (req, res) => {
 router.post("/customer/:id/borrow", async (req, res) => {
    const customer = await db.query("select books_borrowed from customer where id = ?", [
       req.params.id,
+   ]);
+   const seller = await db.query("select books_lent from seller where id = ?", [
+      req.body.sellerId,
+   ]);
+   await db.query("update seller set books_lent = ? where id = ?", [
+      seller[0][0].books_lent + 1,
+      req.body.sellerId,
    ]);
    await db.query("update customer set books_borrowed = ? where id = ?", [
       customer[0][0].books_borrowed + 1,
