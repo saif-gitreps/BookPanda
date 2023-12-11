@@ -20,9 +20,8 @@ router.get("/customer/:id/profile", async (request, response) => {
 });
 
 router.post("/customer/:id/update", async (req, res) => {
-   await db.query(`update customer set name = ? , email = ?, password = ?`, [
+   await db.query(`update customer set name = ?, password = ?`, [
       req.body.userName,
-      req.body.userEmail,
       req.body.userPassword,
    ]);
    res.redirect(`/customer/${req.params.id}/profile`);
