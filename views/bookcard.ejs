@@ -5,14 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Book Card</title>
       <link rel="stylesheet" href="/styles/book.css" />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      />
+      <script
+         src="https://kit.fontawesome.com/4b607fb1a6.js"
+         crossorigin="anonymous"
+      ></script>
    </head>
    <body>
       <div id="header">
-         <a href="/customer/<%=customerId%>" class="back">&#8249;</a>
+         <a href="/customer/<%=customerId%>" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+         </a>
       </div>
       <!-- <div id="content">
          <img class="book-cover" src="/images/bookcover.jpg" alt="Book Cover" />
@@ -39,7 +41,7 @@
             style="display: inline"
          >
             <input type="hidden" name="sellerId" value="<%=book.seller_id%>" />
-            <button class="bt2">borrow</button>
+            <button class="bt1">borrow</button>
          </form>
       </div>
    </body>

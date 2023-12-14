@@ -4,12 +4,21 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="/styles/styes-1.css" />
+      <script
+         src="https://kit.fontawesome.com/4b607fb1a6.js"
+         crossorigin="anonymous"
+      ></script>
       <title>Add new books</title>
    </head>
    <body>
-      <header>
-         <h1>Add New Books</h1>
-      </header>
+      <nav class="bar">
+         <header>
+            <h1>Add New Books</h1>
+            <a href="/seller/<%=sellerId%>/profile">
+               <i class="fa-solid fa-house"></i>
+            </a>
+         </header>
+      </nav>
       <section>
          <form action="/seller/<%=sellerId%>/newbooks" method="post">
             <label for="bookname">Book Name:</label>

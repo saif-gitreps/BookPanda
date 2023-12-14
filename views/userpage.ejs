@@ -4,11 +4,18 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="/styles/styes-1.css" />
+      <script
+         src="https://kit.fontawesome.com/4b607fb1a6.js"
+         crossorigin="anonymous"
+      ></script>
       <title>User Page</title>
    </head>
    <body>
       <header>
          <h1>User Profile</h1>
+         <a href="/customer/<%=customer.id%>">
+            <i class="fa-solid fa-house"></i>
+         </a>
       </header>
       <section>
          <form action="/customer/<%=customer.id%>/update" method="POST">

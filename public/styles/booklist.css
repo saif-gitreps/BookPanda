@@ -1,113 +1,103 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-body{
-    background: linear-gradient(to top, black, rgb(138, 2, 2));
+body {
+   background: linear-gradient(to top, black, rgb(138, 2, 2));
 }
-nav{
-    background: rgba(0,0,0,0.5);
-    border: 2px solid black;
-    box-shadow: 0 0 30px   #888;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    height: 95px;
-    line-height: 65px;
+nav {
+   background: rgba(0, 0, 0, 0.5);
+   border: 2px solid black;
+   box-shadow: 0 0 30px #888;
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+   height: 95px;
+   line-height: 65px;
 }
-.nav-cont{
-    display: flex;
-    column-gap: 52%;
+.nav-cont {
+   display: flex;
+   column-gap: 52%;
 }
 .logo {
-    text-decoration: none;
-    color: #fff;
-    font-size:60px ;
-    letter-spacing: 1.5rem;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-
-        0 0 42px rgb(0, 225, 255);
-
+   text-decoration: none;
+   color: #fff;
+   font-size: 60px;
+   letter-spacing: 1.5rem;
+   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px rgb(0, 225, 255);
 }
-.nav-cont .icon{
-    /* border: 2px solid red; */
-    width: 10%;
-    text-align: center;
-    
-}
-.nav-cont .icon i{
-    /* border: 2px solid red; */
-    filter: invert(100%);
-    padding-top: 30px;
-    font-size: 30px;
-
-}
-.list-cont{
-    display: flex;
-    column-gap: 5%;
-    flex-wrap: wrap;
-    flex: 1;
-    padding-top: 100px;
-    align-items: center;
-    justify-content: center;
-
-}
-.list{
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid red; */
-    border-radius: 15px;
-    color: #242526;
-    width: 400px;
-    margin-top: 20px;
-    height: 400px;
-    text-align: center;
-    flex: 1;
-    transition: .3s;
-
-}
-.list:hover{
-    border: 2px solid rgb(31, 165, 255);
-    box-shadow: 0 0 20px   #888;
-}
-.list-cont .pic{
-    /* border: 2px solid red; */
-    width: 100%;
-    
-}
-.list-cont .pic img{
-    height: 17rem;
-    border-radius: 30px;
-}
-.list-cont .para{
-    /* border: 2px solid purple; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
-    -webkit-text-stroke:2px #fff ;
-}
-.list-cont .btn{
-    /* border: 2px solid red; */
-    height: 50px;
-    margin-top: 1%;
+.nav-cont .icon {
+   /* border: 2px solid red; */
+   width: 10%;
    text-align: center;
 }
-.list-cont button{
-    width: 110px;
-    background-color: antiquewhite;
-    border-radius: 50px;
-    height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: black; */
-    margin: 2px 20px;
-    transition: .3s;
-    cursor: pointer;
+.nav-cont .icon i {
+   /* border: 2px solid red; */
+   filter: invert(100%);
+   padding-top: 30px;
+   font-size: 30px;
 }
-.list-cont button:hover{
-    background: linear-gradient(to right, #5fc2ff, #7b8ffe);
-    -webkit-text-stroke:2px #fff ;
-    border:2px solid #5fc2ff;
+.list-cont {
+   display: flex;
+   column-gap: 5%;
+   flex-wrap: wrap;
+   flex: 1;
+   padding-top: 100px;
+   align-items: center;
+   justify-content: center;
+}
+.list {
+   display: flex;
+   flex-direction: column;
+   /* border: 2px solid red; */
+   border-radius: 15px;
+   color: #242526;
+   width: 400px;
+   margin-top: 20px;
+   height: 400px;
+   text-align: center;
+   flex: 1;
+   transition: 0.3s;
+}
+.list:hover {
+   border: 2px solid rgb(31, 165, 255);
+   box-shadow: 0 0 20px #888;
+}
+.list-cont .pic {
+   /* border: 2px solid red; */
+   width: 100%;
+}
+.list-cont .pic img {
+   height: 17rem;
+   border-radius: 30px;
+}
+.list-cont .para {
+   /* border: 2px solid purple; */
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+   font-size: 50px;
+   -webkit-text-stroke: 2px #fff;
+}
+.list-cont .btn {
+   /* border: 2px solid red; */
+   height: 50px;
+   margin-top: 1%;
+   text-align: center;
+}
+.list-cont button {
+   width: 110px;
+   background-color: antiquewhite;
+   border-radius: 50px;
+   height: 40px;
+   font-family: Arial, Helvetica, sans-serif;
+   /* color: black; */
+   margin: 2px 20px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.list-cont button:hover {
+   background: linear-gradient(to right, #5fc2ff, #7b8ffe);
+   -webkit-text-stroke: 2px #fff;
+   border: 2px solid #5fc2ff;
 }

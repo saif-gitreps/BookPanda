@@ -158,6 +158,7 @@ form .retailer {
    top: 0%;
    -webkit-text-stroke: 0.1px #ad8585;
    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+   -webkit-text-stroke: 0.1px rgb(214, 214, 214);
 }
 .retailer h2 {
    font-size: 1.2rem;
@@ -165,6 +166,7 @@ form .retailer {
    padding: 1rem 0rem 1rem 0rem;
    color: white;
    font-family: "Arial Narrow Bold", sans-serif;
+   -webkit-text-stroke: 0.1px rgb(214, 214, 214);
 }
 .retailer button {
    background: none;

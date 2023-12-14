@@ -7,9 +7,12 @@
       <title>Seller Page</title>
    </head>
    <body>
-      <header>
-         <h1>Seller Profile</h1>
-      </header>
+      <nav class="bar">
+         <header>
+            <h1>Seller Profile</h1>
+            <a href="/">LOG OUT</a>
+         </header>
+      </nav>
       <section>
          <form action="/seller/<%=seller.id%>/update" method="POST">
             <label for="userId">ID:</label>

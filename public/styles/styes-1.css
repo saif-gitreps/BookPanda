@@ -1,7 +1,9 @@
 body {
    font-family: Arial, sans-serif;
-   background-color: rgb(226, 140, 140);
+   background: linear-gradient(to top, black, rgb(138, 2, 2));
+   /* background-color: rgb(226, 140, 140); */
    margin: 0;
+   height: 120vh;
    padding: 0;
 }
 
@@ -26,6 +28,11 @@ form {
    flex-direction: column;
    max-width: 300px;
    margin: 0 auto;
+}
+nav a {
+   text-decoration: none;
+   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 label {
