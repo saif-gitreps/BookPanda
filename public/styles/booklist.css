@@ -76,7 +76,7 @@ nav {
 .list-cont .para {
    /* border: 2px solid purple; */
    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-   font-size: 50px;
+   font-size: 2rem;
    -webkit-text-stroke: 2px #fff;
 }
 .list-cont .btn {

@@ -15,22 +15,12 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use("cookie-parser")();
 
-//login page s.
 app.use(loginRoutes);
-//login page e.
-
-//register page s
 app.use(registerRoutes);
-//register page e
-
-//customer page s
 app.use(customerRoutes);
-//customer page e
-
-//seller page s
 app.use(sellerRoutes);
-
 app.use(bookCardRoutes);
 
 app.listen(3000, () => {
