@@ -1,8 +1,7 @@
 const path = require("path");
 const express = require("express");
-const db = require("./database/data");
+const cookieParser = require("cookie-parser");
 
-//routes requiring
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
 const customerRoutes = require("./routes/customer");
@@ -13,15 +12,14 @@ app = express();
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
-app.use("cookie-parser")();
 
-app.use(loginRoutes);
-app.use(registerRoutes);
-app.use(customerRoutes);
-app.use(sellerRoutes);
-app.use(bookCardRoutes);
+app.use("/", loginRoutes);
+app.use("/register", registerRoutes);
+app.use("/customer", customerRoutes);
+app.use("/seller", sellerRoutes);
+app.use("/book", bookCardRoutes);
 
 app.listen(3000, () => {
    console.log("server initiated.");

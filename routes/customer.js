@@ -3,14 +3,14 @@ const db = require("../database/data");
 
 const router = express.Router();
 
-router.get("/customer/:id", async (request, response) => {
+router.get("/:id", async (request, response) => {
    const sellerData = await db.query(
       "select id, name, address, DATE_FORMAT(joindate, '%M-%y') AS joinDate from seller"
    );
    response.render("customer", { sellers: sellerData[0], customerId: request.params.id });
 });
 
-router.get("/customer/:id/profile", async (request, response) => {
+router.get("/:id/profile", async (request, response) => {
    const customer = await db.query("select * from customer where id = ?", [
       request.params.id,
    ]);
@@ -19,7 +19,7 @@ router.get("/customer/:id/profile", async (request, response) => {
    });
 });
 
-router.post("/customer/:id/update", async (req, res) => {
+router.post("/:id/update", async (req, res) => {
    await db.query(`update customer set name = ?, password = ?`, [
       req.body.userName,
       req.body.userPassword,
@@ -27,7 +27,7 @@ router.post("/customer/:id/update", async (req, res) => {
    res.redirect(`/customer/${req.params.id}/profile`);
 });
 
-router.post("/customer/:id/buy", async (req, res) => {
+router.post("/:id/buy", async (req, res) => {
    const customer = await db.query("select books_purchased from customer where id = ?", [
       req.params.id,
    ]);
@@ -46,7 +46,7 @@ router.post("/customer/:id/buy", async (req, res) => {
    res.redirect(`/customer/${req.params.id}`);
 });
 
-router.post("/customer/:id/borrow", async (req, res) => {
+router.post("/:id/borrow", async (req, res) => {
    const customer = await db.query("select books_borrowed from customer where id = ?", [
       req.params.id,
    ]);

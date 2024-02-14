@@ -27,7 +27,7 @@
          <% if(books.length == 0 || !books) {%>
          <h1>Sorry the seller is not selling any books at the moment</h1>
          <% } else { %> <% for(let book of books) {%>
-         <form action="/book-card/<%=book.id%>" method="GET">
+         <form action="/book/<%=book.id%>" method="GET">
             <div class="list">
                <input
                   type="hidden"
@@ -42,7 +42,7 @@
                   />
                </div>
                <div class="para">Title: <%=book.title%></div>
-               <!-- <div class="para">Written by: <%=book.author%></div> -->
+               <div class="para">Written by: <%=book.author%></div>
                <div class="btn"><button type="submit">View Books</button></div>
             </div>
          </form>

@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model book_shelf {
+  id        Int     @id @default(autoincrement())
+  title     String? @db.VarChar(50)
+  author    String? @db.VarChar(50)
+  summary   String? @db.VarChar(200)
+  seller_id Int?
+  category  String? @db.VarChar(200)
+  pages     Int?
+  price     Int?
+}
+
+model customer {
+  id              Int     @id @default(autoincrement())
+  name            String? @db.VarChar(50)
+  email           String? @unique(map: "email") @db.VarChar(200)
+  address         String? @db.VarChar(200)
+  password        String? @db.VarChar(200)
+  books_purchased Int?
+  books_borrowed  Int?
+}
+
+model seller {
+  id         Int       @id @default(autoincrement())
+  name       String?   @db.VarChar(50)
+  email      String?   @unique(map: "email") @db.VarChar(200)
+  address    String?   @db.VarChar(200)
+  joindate   DateTime? @default(now()) @db.DateTime(0)
+  password   String?   @db.VarChar(200)
+  books_sold Int?
+  books_lent Int?
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model user {
+  id   Int?
+  name String? @db.VarChar(200)
+
+  @@ignore
+}
+

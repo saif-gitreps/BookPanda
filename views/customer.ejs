@@ -13,7 +13,9 @@
             <div class="logo">BOOKPANDA</div>
             <ul class="nav-link">
                <li id="logout-svg">
-                  <a href="/"><img src="../img/logout-svgrepo-com.svg" alt="logout" /></a>
+                  <a href="/login"
+                     ><img src="../img/logout-svgrepo-com.svg" alt="logout"
+                  /></a>
                </li>
                <li>
                   <a href="/customer/<%=customerId%>/profile"
@@ -31,9 +33,9 @@
                               <li>
                                  <div class="container">
                                     <form
-                                       action="/search"
+                                       action="/book/get-book"
                                        class="frm"
-                                       method="get"
+                                       method="GET"
                                        enctype="application/x-www-form-urlencoded"
                                     >
                                        <input
